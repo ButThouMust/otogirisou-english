@@ -4,18 +4,14 @@
 
 # otogirisou-english
 
-Update April 2, 2025: I have been going through the script again and preparing for another patch release. It will be released when it is ready, but I would give a rough estimate of mid April to early May at the latest.
-
-Patches for an English translation of Otogirisou for Super Famicom. Although I would prefer the whole script translation to be peer-reviewed, I consider it good enough to have my tools and such available for download.
-
-All my source code, tools, reverse engineering notes, etc. are available in [this repository](https://github.com/ButThouMust/otogirisou-tools), which is also included as a submodule here.
+Patches for an English translation of Otogirisou for Super Famicom. All my source code, tools, reverse engineering notes, the translated script, etc. are available in [this repository](https://github.com/ButThouMust/otogirisou-tools), which is also included as a submodule here.
 
 **Please let me know** if you would like to contribute to the translation, or would like to use this project as a basis for translating the game to another language! (related [RHDN forum post](https://www.romhacking.net/forum/index.php?topic=38663.0))
 
 **Patch files from here are _not_ to be reuploaded to other sites without my permission.** In other words, just ask if you want to upload them somewhere.
 
 This is a translation project independent of the one by Tom (RetroTranslator) and DDS, for which they released a patch on March 6, 2024.
-- This is not to dismiss the quality of their project, but please do not send me suggestions for my project based on theirs (e.g. "they did X, you did Y, you should change Y to be more like X").
+- This is not to dismiss the quality of their project, but please do not send me suggestions for my project based on theirs. Might not be the best way to word this, but I don't want to leech off their project.
 - That two separate translation projects exist for the game, I chalk up to unfortunate timing.
 
 # How to patch
