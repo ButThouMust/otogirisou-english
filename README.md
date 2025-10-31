@@ -23,7 +23,7 @@ SHA-1:   2c27b89a244abe941b6a9fceb1a674dbefd1f734
 SHA-256: d85b6764a35f4dcee3ab5843df1c467ebdfe5f02236043a4e466e6975a3f70ca
 ```
 
-Two patches are included: one for honorifics on, and one for honorifics off (more details about this below). Use whichever patch you prefer, with any patching utility that supports the BPS format. It should produce a 1.5 MB file. I personally used the utility [Floating IPS](https://www.romhacking.net/utilities/1040/) to generate the patch.
+Two patches are available: one for honorifics on, and one for honorifics off (more details about this below). Use whichever patch you prefer, with any patching utility that supports the BPS format. It should produce a 1.5 MB file. I personally used the utility [Floating IPS](https://www.romhacking.net/utilities/1040/) to generate the patch.
 
 # How to play the game
 Otogirisou is a single player sound novel game from Chunsoft (now Spike Chunsoft). It was both their debut title as a game publisher, in 1992, and the first entry in their sound novel series (Kamaitachi no Yoru, Machi, Imabikisou, and 428 Shibuya Scramble).
@@ -37,7 +37,9 @@ The controls are fairly simple:
 - Start: Only used on the title screen (advance to menus) and name entry screen (confirm entered name).
 - Select: Only used in the name entry menu. It brings you from the grid to the page selector, while preserving your grid position.
 
-You must first name the protagonist (up to 6 characters). His default name is Kouhei (公平) in the PlayStation remake, but he has no default name in the Super Famicom version. The basic plot is that Kouhei and his girlfriend Nami (奈美) are driving home from a date, when circumstances force them to take shelter from a rainstorm in a creepy mansion. It soon becomes apparent that some kind of presence inside clearly doesn't want them there.
+You must first name the protagonist (up to 6 characters). His default name is Kouhei (公平) in the PlayStation remake, but he has no default name in the Super Famicom version. As of version 1.2, the translation patch will suggest "Kouhei" as his name upon starting a new file. Of course, you can still rename him if you wish.
+
+The basic plot is that Kouhei and his girlfriend Nami (奈美) are driving home from a date, when circumstances force them to take shelter from a rainstorm in a creepy mansion. It soon becomes apparent that some kind of presence inside clearly doesn't want them there.
 
 The gameplay, so to speak, consists of reading text and picking a choice from a list when the game presents you with a branching path. This continues until you reach one of several available endings. The game will automatically save your progress whenever you finish a screen of text or reach the credits.
 
@@ -52,10 +54,10 @@ Otogirisou's replayability comes from the different paths you can take, and the 
 >   - When you know for sure that your save data has carried over, you can delete the ROM and save data for the old version of the patch.
 
 # Features added for patch
-- A more aesthetically pleasing English font than what was originally in the game.
+- A more aesthetically pleasing English font than the one that was already in the game.
   - Bypassing of the original game's font compression, to more easily add/edit characters if needed.
   - Linebreaking logic that, while imperfect, is better suited for English text and cuts out lots of manual formatting.
-  - [Text kerning](https://en.wikipedia.org/wiki/Kerning), both horizontally and vertically.
+  - Support for [text kerning](https://en.wikipedia.org/wiki/Kerning), both horizontally and vertically.
   - Up to 10 lines of text can be on screen at once, instead of 9 like in the original Japanese game.
 - Translation of all important graphics that contain Japanese text.
   - Title screen, credits, menu text, and one certain graphic in the story.
@@ -64,8 +66,8 @@ Otogirisou's replayability comes from the different paths you can take, and the 
   - Translated and restored two screens of text, plus another line, that were unused/inaccessible in the original Japanese script.
   - Made an unused graphic in the game viewable, after I discovered it in the game's data.
 - Option to let the player enable or disable honorifics.
-  - Normally, I would have left them out altogether, but there is an interesting argument for keeping them in. 
-  - The original Japanese game has what you can technically consider a "game mechanic," where Nami uses a different honorific for Kouhei on each playthrough. For example, she may start with san but can switch to kun, chan, etc.
+  - Normally, I would have left them out altogether if I had to choose only one or the other. However, there is an interesting argument for keeping them in. 
+  - The original Japanese game has what you can technically consider a "game mechanic," where Nami randomly picks a different honorific for Kouhei on each playthrough. For example, she may start with san but can switch to kun, chan, etc.
   - In the spirit of the sound novel, I leave this decision up to you, the player! :)
 
 # Submitting issues
@@ -86,15 +88,16 @@ Issues in order from most severe to least concern (current priorities in *italic
 - Text kerning pairs that should have kerning but don't, or vice versa
 
 # Known issues
-- Due to how kerning is currently implemented, the one place it does *not* occur is the protagonist's name.
 - I have not thoroughly tested the automatic line breaking while accounting for how you can name the protagonist `I`, `WWWWWW`, or something in between.
 
 # Potential improvements
 - Make a more user-friendly option to enable or disable honorifics.
   - Currently, this works by having two different patches. So if you want to switch, you would have to keep two copies of the game (one with honorifics on, another with honorifics off), and rename your save data accordingly.
-  - One solution I had brainstormed was implementing the option through the otherwise unused R button.
-- Change the kerning implementation to allow for kerning in the player's name.
+  - One solution I had brainstormed was implementing the option through the otherwise unused R button. However, I do not know if I could code up a good, simple way to clearly indicate such a feature to the player in the game.
 - Make the automatic linebreaking logic more robust.
+- See if it's possible to fit the translated game into a 1 MB file like the original Japanese game. Some ideas:
+  - Use a better compression format for the graphics' tilesets and/or tilemaps.
+  - Find ways to shrink the script further down.
 
 # Project credits
 Alphabetical list of people who have contributed to this project, directly or indirectly, at some point:
